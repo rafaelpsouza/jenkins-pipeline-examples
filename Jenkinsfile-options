@@ -1,0 +1,34 @@
+// https://jenkins.io/doc/book/pipeline/syntax/#options
+pipeline {
+    agent any 
+
+    options {
+        disableConcurrentBuilds()
+        timeout(time: 1, unit: 'HOURS')
+        retry(3)
+        timestamps()
+        buildDiscarder(logRotator(numToKeepStr: '3'))
+    }
+
+    stages {
+        stage('Build') { 
+            steps { 
+                // sh 'make'
+                echo 'Building ...'
+            }
+        }
+        stage('Test'){
+            steps {
+                // sh 'make check'
+                // junit 'reports/**/*.xml'
+                echo 'Testing ...'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                // sh 'make publish'
+                echo 'Deploying ...'
+            }
+        }
+    }
+}
