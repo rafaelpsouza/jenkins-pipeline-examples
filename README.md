@@ -1,11 +1,18 @@
 # Jenkins Pipeline Examples
 
+https://jenkins.io/doc/book/pipeline/syntax/
+
 ## Basic Declarative Pipeline
+https://jenkins.io/doc/book/pipeline/
+
 
 Jenkinsfile-basic
-https://jenkins.io/doc/book/pipeline/
+
 
 ## Docker Agent
 
-Jenkinsfile-docker
 https://jenkins.io/doc/book/pipeline/docker/
+
+Single Agent: Jenkinsfile-docker
+
+
