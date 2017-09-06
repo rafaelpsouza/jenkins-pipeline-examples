@@ -1,13 +1,11 @@
 // https://jenkins.io/doc/book/pipeline/syntax/#when
-
-
 pipeline {
 
     agent any
 
      parameters {
         string(name: 'DEPLOYER', defaultValue: 'Mr Jenkins', description: 'Who are you?')
-        choice(name: 'DEPLOY_TO', choices: 'development\production', description: 'Deploy to ...')
+        choice(name: 'DEPLOY_TO', choices: 'development\nproduction', description: 'Deploy to ...')
      }
 
     stages {
