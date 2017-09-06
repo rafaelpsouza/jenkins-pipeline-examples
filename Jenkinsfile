@@ -5,8 +5,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'java --version'
-                //sh 'whoami'
+                sh 'java -version'
             }
         }
     }
