@@ -1,24 +1,11 @@
 pipeline {
-    agent any 
-
+    agent {
+        docker { image 'openjdk-7-jdk-alpine' }
+    }
     stages {
-        stage('Build') { 
-            steps { 
-                // sh 'make'
-                echo 'Building ...'
-            }
-        }
-        stage('Test'){
+        stage('Test') {
             steps {
-                // sh 'make check'
-                // junit 'reports/**/*.xml'
-                echo 'Testing ...'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                // sh 'make publish'
-                echo 'Deploying ...'
+                sh 'java --version'
             }
         }
     }
